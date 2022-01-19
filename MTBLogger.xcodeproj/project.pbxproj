@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1EFB6EDFF07CC2A531992CC7 /* Pods_MTBLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F095FBB8DEB96C28994AEA1 /* Pods_MTBLoggerTests.framework */; };
+		C955D99F27975EA400A3DE46 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C955D99E27975EA400A3DE46 /* HomeTabBarController.swift */; };
+		C955D9A1279761B700A3DE46 /* AthleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C955D9A0279761B700A3DE46 /* AthleteViewController.swift */; };
 		C9575A7F279635A90085DAE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9575A7E279635A90085DAE8 /* AppDelegate.swift */; };
 		C9575A81279635A90085DAE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9575A80279635A90085DAE8 /* SceneDelegate.swift */; };
 		C9575A89279635A90085DAE8 /* MTBLogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9575A87279635A90085DAE8 /* MTBLogger.xcdatamodeld */; };
@@ -16,8 +18,8 @@
 		C9575A99279635AC0085DAE8 /* MTBLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9575A98279635AC0085DAE8 /* MTBLoggerTests.swift */; };
 		C9575AA3279635AC0085DAE8 /* MTBLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9575AA2279635AC0085DAE8 /* MTBLoggerUITests.swift */; };
 		C9575AA5279635AC0085DAE8 /* MTBLoggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9575AA4279635AC0085DAE8 /* MTBLoggerUITestsLaunchTests.swift */; };
-		C9575AB22796365B0085DAE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9575AB12796365B0085DAE8 /* Main.storyboard */; };
 		C9575AB4279636670085DAE8 /* ConnectWithStrava.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9575AB3279636660085DAE8 /* ConnectWithStrava.swift */; };
+		C9DA9C71279883ED00C993D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DA9C70279883ED00C993D8 /* Main.storyboard */; };
 		D357F35596745013B3787F75 /* Pods_MTBLogger_MTBLoggerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FFFC95290349AB6D26FD6C /* Pods_MTBLogger_MTBLoggerUITests.framework */; };
 		E7250E9C9CEDDB0D8AC8C3CF /* Pods_MTBLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2D2225658603453D609910 /* Pods_MTBLogger.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		9F095FBB8DEB96C28994AEA1 /* Pods_MTBLoggerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTBLoggerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2D2225658603453D609910 /* Pods_MTBLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTBLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE945725677FB3C02FD1D7BA /* Pods-MTBLoggerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTBLoggerTests.debug.xcconfig"; path = "Target Support Files/Pods-MTBLoggerTests/Pods-MTBLoggerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C955D99E27975EA400A3DE46 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		C955D9A0279761B700A3DE46 /* AthleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteViewController.swift; sourceTree = "<group>"; };
 		C9575A7B279635A90085DAE8 /* MTBLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTBLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9575A7E279635A90085DAE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9575A80279635A90085DAE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,8 +64,8 @@
 		C9575A9E279635AC0085DAE8 /* MTBLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTBLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9575AA2279635AC0085DAE8 /* MTBLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTBLoggerUITests.swift; sourceTree = "<group>"; };
 		C9575AA4279635AC0085DAE8 /* MTBLoggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTBLoggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C9575AB12796365B0085DAE8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
-		C9575AB3279636660085DAE8 /* ConnectWithStrava.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectWithStrava.swift; path = ../../../../../.Trash/ConnectWithStrava.swift; sourceTree = "<group>"; };
+		C9575AB3279636660085DAE8 /* ConnectWithStrava.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectWithStrava.swift; sourceTree = "<group>"; };
+		C9DA9C70279883ED00C993D8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F69AC8A0CAA5D176B4D20E8E /* Pods-MTBLogger-MTBLoggerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTBLogger-MTBLoggerUITests.debug.xcconfig"; path = "Target Support Files/Pods-MTBLogger-MTBLoggerUITests/Pods-MTBLogger-MTBLoggerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,8 +148,9 @@
 				C9575AB527963B440085DAE8 /* Strava */,
 				C9575A7E279635A90085DAE8 /* AppDelegate.swift */,
 				C9575A80279635A90085DAE8 /* SceneDelegate.swift */,
-				C9575AB3279636660085DAE8 /* ConnectWithStrava.swift */,
-				C9575AB12796365B0085DAE8 /* Main.storyboard */,
+				C955D9A0279761B700A3DE46 /* AthleteViewController.swift */,
+				C9DA9C70279883ED00C993D8 /* Main.storyboard */,
+				C955D99E27975EA400A3DE46 /* HomeTabBarController.swift */,
 				C9575A8A279635AC0085DAE8 /* Assets.xcassets */,
 				C9575A8C279635AC0085DAE8 /* LaunchScreen.storyboard */,
 				C9575A8F279635AC0085DAE8 /* Info.plist */,
@@ -174,6 +179,7 @@
 		C9575AB527963B440085DAE8 /* Strava */ = {
 			isa = PBXGroup;
 			children = (
+				C9575AB3279636660085DAE8 /* ConnectWithStrava.swift */,
 			);
 			path = Strava;
 			sourceTree = "<group>";
@@ -287,7 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9575AB22796365B0085DAE8 /* Main.storyboard in Resources */,
+				C9DA9C71279883ED00C993D8 /* Main.storyboard in Resources */,
 				C9575A8E279635AC0085DAE8 /* LaunchScreen.storyboard in Resources */,
 				C9575A8B279635AC0085DAE8 /* Assets.xcassets in Resources */,
 			);
@@ -417,10 +423,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C955D9A1279761B700A3DE46 /* AthleteViewController.swift in Sources */,
 				C9575A89279635A90085DAE8 /* MTBLogger.xcdatamodeld in Sources */,
 				C9575A7F279635A90085DAE8 /* AppDelegate.swift in Sources */,
 				C9575AB4279636670085DAE8 /* ConnectWithStrava.swift in Sources */,
 				C9575A81279635A90085DAE8 /* SceneDelegate.swift in Sources */,
+				C955D99F27975EA400A3DE46 /* HomeTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
