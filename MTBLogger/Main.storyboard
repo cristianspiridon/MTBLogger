@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -26,6 +26,9 @@
                                 <rect key="frame" x="124" y="432.5" width="166" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Connect with STRAVA"/>
+                                <connections>
+                                    <action selector="onConnectWithStrava:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2bx-c7-Wgv"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hB8-Y8-qsj">
                                 <rect key="frame" x="130" y="753" width="154.5" height="49"/>
@@ -65,9 +68,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.98550724637681" y="130.58035714285714"/>
+            <point key="canvasLocation" x="181" y="137"/>
         </scene>
-        <!--Item 2-->
+        <!--Activities-->
         <scene sceneID="nle-sU-zZ7">
             <objects>
                 <viewController id="xQk-QD-9Ic" sceneMemberID="viewController">
@@ -77,23 +80,70 @@
                         <viewLayoutGuide key="safeArea" id="Wec-5O-Ujw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="qLm-gq-In0"/>
+                    <tabBarItem key="tabBarItem" title="Activities" id="qLm-gq-In0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jA6-wv-RN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1972" y="611"/>
         </scene>
-        <!--Item 1-->
+        <!--Profile-->
         <scene sceneID="UC6-qy-7je">
             <objects>
                 <viewController id="rWg-AT-IUV" customClass="AthleteViewController" customModule="MTBLogger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uz7-Lg-ZeV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Soc-et-waA">
+                                <rect key="frame" x="87" y="342.5" width="240" height="211.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-vR-RdO">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="HVE-ee-WTH"/>
+                                            <constraint firstAttribute="height" constant="120" id="dPM-Vd-F9v"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eoj-9a-WmQ">
+                                        <rect key="frame" x="0.0" y="140" width="240" height="71.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxS-gh-oIK">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KL0-sk-JLq">
+                                                <rect key="frame" x="0.0" y="25.5" width="240" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggI-Nm-hUl">
+                                                <rect key="frame" x="0.0" y="51" width="240" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MUa-m4-2A7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Soc-et-waA" firstAttribute="centerY" secondItem="Uz7-Lg-ZeV" secondAttribute="centerY" id="4En-ep-bRu"/>
+                            <constraint firstItem="Soc-et-waA" firstAttribute="centerX" secondItem="Uz7-Lg-ZeV" secondAttribute="centerX" id="amm-rW-buj"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="1ZK-4P-mUq"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="1ZK-4P-mUq"/>
+                    <connections>
+                        <outlet property="createdAtLabel" destination="ggI-Nm-hUl" id="TRa-SM-J7J"/>
+                        <outlet property="locationLabel" destination="KL0-sk-JLq" id="XRp-ro-DZL"/>
+                        <outlet property="nameLabel" destination="OxS-gh-oIK" id="L8Q-Yh-Jgi"/>
+                        <outlet property="profileImage" destination="Na7-vR-RdO" id="B2f-Q8-7Qv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rci-pS-D88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

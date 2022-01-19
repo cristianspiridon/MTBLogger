@@ -7,23 +7,49 @@
 
 import UIKit
 
+extension UIImageView {
+    func from(url: URL?) {
+        guard let url = url else { return }
+        do {
+            let data = try Data(contentsOf: url)
+            self.image = UIImage(data: data)
+        }
+        catch {
+            return
+        }
+    }
+}
+
 class AthleteViewController: UIViewController {
 
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var createdAtLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        guard let currentAthlete = currentAthlete else { return }
+        setupWith(with: currentAthlete)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupWith(with athlete: RAthlete) {
+        nameLabel.text = athlete.firstname + " " + athlete.lastname
+        profileImage.from(url: URL(string: athlete.profile))
+        locationLabel.text = athlete.city + ", " + athlete.country
+        if let date = athlete.createdAt {
+            createdAtLabel.text = "Member since " + date.toString()
+        }
     }
-    */
+}
 
+
+extension Date {
+
+    func toString(format: String = "yyyy-MM-dd") -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.dateFormat = format
+        return formatter.string(from: self)
+    }
 }

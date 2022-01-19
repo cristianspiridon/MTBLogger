@@ -36,6 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         strava = StravaClient.sharedInstance.initWithConfig(config)
 
+        RealmManager.shared.configureRealm()
+//        RealmManager.shared.clearAllData()
+        
+        if let token = RealmManager.shared.objects(RToken.self)?.first {
+            currentAthlete = token.athlete
+        }
+        
         super.init()
     }
 

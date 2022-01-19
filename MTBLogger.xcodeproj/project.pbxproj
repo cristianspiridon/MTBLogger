@@ -20,6 +20,9 @@
 		C9575AA5279635AC0085DAE8 /* MTBLoggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9575AA4279635AC0085DAE8 /* MTBLoggerUITestsLaunchTests.swift */; };
 		C9575AB4279636670085DAE8 /* ConnectWithStrava.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9575AB3279636660085DAE8 /* ConnectWithStrava.swift */; };
 		C9DA9C71279883ED00C993D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DA9C70279883ED00C993D8 /* Main.storyboard */; };
+		C9DA9C75279889D100C993D8 /* RToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA9C74279889D100C993D8 /* RToken.swift */; };
+		C9DA9C7727988C2A00C993D8 /* RAthlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA9C7627988C2A00C993D8 /* RAthlete.swift */; };
+		C9DA9C7927988E1A00C993D8 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA9C7827988E1A00C993D8 /* RealmManager.swift */; };
 		D357F35596745013B3787F75 /* Pods_MTBLogger_MTBLoggerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FFFC95290349AB6D26FD6C /* Pods_MTBLogger_MTBLoggerUITests.framework */; };
 		E7250E9C9CEDDB0D8AC8C3CF /* Pods_MTBLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2D2225658603453D609910 /* Pods_MTBLogger.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +69,9 @@
 		C9575AA4279635AC0085DAE8 /* MTBLoggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTBLoggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C9575AB3279636660085DAE8 /* ConnectWithStrava.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectWithStrava.swift; sourceTree = "<group>"; };
 		C9DA9C70279883ED00C993D8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C9DA9C74279889D100C993D8 /* RToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RToken.swift; sourceTree = "<group>"; };
+		C9DA9C7627988C2A00C993D8 /* RAthlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAthlete.swift; sourceTree = "<group>"; };
+		C9DA9C7827988E1A00C993D8 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		F69AC8A0CAA5D176B4D20E8E /* Pods-MTBLogger-MTBLoggerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTBLogger-MTBLoggerUITests.debug.xcconfig"; path = "Target Support Files/Pods-MTBLogger-MTBLoggerUITests/Pods-MTBLogger-MTBLoggerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +151,7 @@
 		C9575A7D279635A90085DAE8 /* MTBLogger */ = {
 			isa = PBXGroup;
 			children = (
+				C9DA9C72279889AE00C993D8 /* Realm */,
 				C9575AB527963B440085DAE8 /* Strava */,
 				C9575A7E279635A90085DAE8 /* AppDelegate.swift */,
 				C9575A80279635A90085DAE8 /* SceneDelegate.swift */,
@@ -182,6 +189,24 @@
 				C9575AB3279636660085DAE8 /* ConnectWithStrava.swift */,
 			);
 			path = Strava;
+			sourceTree = "<group>";
+		};
+		C9DA9C72279889AE00C993D8 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				C9DA9C73279889BD00C993D8 /* Models */,
+				C9DA9C7827988E1A00C993D8 /* RealmManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		C9DA9C73279889BD00C993D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9DA9C74279889D100C993D8 /* RToken.swift */,
+				C9DA9C7627988C2A00C993D8 /* RAthlete.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,8 +449,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C955D9A1279761B700A3DE46 /* AthleteViewController.swift in Sources */,
+				C9DA9C75279889D100C993D8 /* RToken.swift in Sources */,
+				C9DA9C7727988C2A00C993D8 /* RAthlete.swift in Sources */,
 				C9575A89279635A90085DAE8 /* MTBLogger.xcdatamodeld in Sources */,
 				C9575A7F279635A90085DAE8 /* AppDelegate.swift in Sources */,
+				C9DA9C7927988E1A00C993D8 /* RealmManager.swift in Sources */,
 				C9575AB4279636670085DAE8 /* ConnectWithStrava.swift in Sources */,
 				C9575A81279635A90085DAE8 /* SceneDelegate.swift in Sources */,
 				C955D99F27975EA400A3DE46 /* HomeTabBarController.swift in Sources */,

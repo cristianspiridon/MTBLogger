@@ -8,6 +8,8 @@ target 'MTBLogger' do
   # Pods for MTBLogger
 
 pod "StravaSwift", '~> 1.0.0'
+pod 'RealmSwift'
+
 
   target 'MTBLoggerTests' do
     inherit! :search_paths

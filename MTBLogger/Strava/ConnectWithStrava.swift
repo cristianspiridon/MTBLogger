@@ -15,12 +15,14 @@ class ConnectWithStrava: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if currentAthlete != nil {
+            navigateToHome()
+        }
     }
     
     
     @IBAction func onConnectWithStrava(_ sender: Any) {
-       // presentWithLibrary()
-        navigateToHome()
+        presentWithLibrary()
     }
     
     
@@ -36,7 +38,7 @@ class ConnectWithStrava: UIViewController {
         switch result {
             case .success(let token):
                 self.token = token
-                print("[cs] token ", token)
+                RealmManager.shared.add(RToken.create(token: token))
                 navigateToHome()
             case .failure(let error):
             print("[cs] error ", error)
