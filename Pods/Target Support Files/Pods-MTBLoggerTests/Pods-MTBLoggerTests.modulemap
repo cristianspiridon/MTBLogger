@@ -1,6 +1,0 @@
-framework module Pods_MTBLoggerTests {
-  umbrella header "Pods-MTBLoggerTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
